@@ -1,0 +1,106 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('court2.jpg');
+    background-size: 100%;
+    margin-top: 60px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+header {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+form {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.sel {
+   
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+}
+
+.upload {
+    position: relative;
+    width: 400px;
+    min-height: 445px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+    background: #e8d7a9;
+    -webkit-animation: fadeup .5s .5s ease both;
+            animation: fadeup .5s .5s ease both;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+            transition: transform .5s .5s ease;
+  }
+
+  #drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    font-family: sans-serif;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+  }
+  #drop-area.highlight {
+    border-color: purple;
+  }
+  p {
+    margin-top: 0;
+  }
+  .my-form {
+    display: inline-block;
+  }
+  #gallery {
+    margin-top: 10px;
+  }
+  #gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .button:hover {
+    background: #ddd;
+  }
+  #fileElem {
+    display: none;
+  }
+
+  @-webkit-keyframes fadeup {
+    to {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeup {
+    to {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }

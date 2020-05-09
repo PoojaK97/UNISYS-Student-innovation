@@ -4,8 +4,8 @@ me.avatar = "https://lh6.googleusercontent.com/-lr2nyjhhjXw/AAAAAAAAAAI/AAAAAAAA
 var you = {};
 you.avatar = "https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg";
 var botspeak = false;
-var bingClientTTS = new BingSpeech.TTSClient("caf7cb90867640528f7f7b8c8f033b67", BingSpeech.SupportedLocales.enUS_Female);
-var bingClientSR = new BingSpeech.RecognitionClient("caf7cb90867640528f7f7b8c8f033b67");
+var bingClientTTS = new BingSpeech.TTSClient("78ab44c083374b71990cccb824bf9819", BingSpeech.SupportedLocales.enUS_Female);
+var bingClientSR = new BingSpeech.RecognitionClient("78ab44c083374b71990cccb824bf9819");
 var recordstate = false;
 
 function formatAMPM(date) {
@@ -64,11 +64,11 @@ function setluismsg(text) {
             "verbose": "true",
             "spellCheck": "false",
             "staging": "false",
-            "subscription-key":"71243c9bc0ff4b8794b3a5ae060ea564",
+            "subscription-key" : "3a6f417091c9461d939e351500018911",
             "show-all-intents":"true"
         };
         $.ajax({
-            url: "https://westus.api.cognitive.microsoft.com/luis/prediction/v3.0/apps/f18120e7-1a2d-4ad5-8103-15b770a9a819/slots/production/predict?" + $.param(params),
+            url: "https://westus.api.cognitive.microsoft.com/luis/prediction/v3.0/apps/e0189a30-564d-4fe6-9fce-5381f96f4fd8/slots/production/predict?" +  $.param(params),
             beforeSend: function(xhrObj){
                 // Request headers
                // xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","71243c9bc0ff4b8794b3a5ae060ea564");

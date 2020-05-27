@@ -16,14 +16,20 @@
     <link href="{% static 'legal/mainpage/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
+    
     <!-- Plugin CSS -->
     <link href="{% static 'legal/mainpage/vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{% static 'legal/mainpage/css/creative.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'legal/mainpage/chatcss.css' %}">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
 
+    <style>
+      .canvas-container {
+        margin: 0 auto;
+        text-align: center;    }
+    </style>
   </head>
 
   <body id="page-top">
@@ -129,6 +135,51 @@ We then provide you with the following:</p>
       </div>
     </section>
 
+    <!--<section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Performance</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="canvas-container" >
+        <canvas id="buyers" width="800" height="500"></canvas>
+        <!-- pie chart canvas element -->
+        <!-- <canvas id="countries" width="600" height="400"></canvas> -->
+        <!-- bar chart canvas element -->
+        <!-- <canvas id="income" width="600" height="400"></canvas> -->
+        <!--<script>
+            // line chart data
+            var buyerData = {
+                labels : [0,10,20,30,40,50,60,70,80,90,100],
+                datasets : [
+                {
+                    fillColor : "rgba(172,194,132,0.4)",
+                    strokeColor : "#ACC26D",
+                    pointColor : "#fff",
+                    pointStrokeColor : "#9DB86D",
+                    data : [51.5789,77.5187,88.5714,93.8345,95.4135,96.0150,97.0676,96.7669]
+                },
+                {
+                    fillColor : "rgba(172,194,132,0.4)",
+                    strokeColor : "#000000",
+                    pointColor : "#000",
+                    pointStrokeColor : "#000000",
+                    data : [60.9523,89.8412,90.0000,92.857,94.1269,95.5555,93.9682, 94.2857]
+                }
+            ]
+            }
+            // get line chart canvas
+            var buyers = document.getElementById('buyers').getContext('2d');
+            // draw line chart
+            new Chart(buyers).Line(buyerData);
+            
+        </script>
+      </div>
+    </section>-->
+
     <section class="bg-primary" id="portfolio">
 	<div class="container">
         <div class="row">
@@ -187,7 +238,7 @@ Microsoft for their constant support, amazing Azure cloud services, PROSE SDK, L
     <script src="{% static 'legal/mainpage/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
     <script src="{% static 'legal/mainpage/vendor/scrollreveal/scrollreveal.min.js' %}"></script>
     <script src="{% static 'legal/mainpage/vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
-        <script src="{% static 'legal/mainpage/js/creative.min.js' %}"></script>
+    <script src="{% static 'legal/mainpage/js/creative.min.js' %}"></script>
 
 
     <!-- Custom scripts for this template -->

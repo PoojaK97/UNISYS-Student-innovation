@@ -1,2 +1,4 @@
-./unisys-legal/venv/
-/venv/
+unisys-legal/venv/
+venv/
+privacyx/venv/
+privacyx/roberta.pt

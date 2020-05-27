@@ -179,24 +179,24 @@ def responseview(request):
       c = c+1
    sentence_with_importance = sorted(sentence_with_importance.items(), key=operator.itemgetter(1),reverse=True)
    cnt = 0
-   #summary = []
-   # sentence_no = []
-   # for word_prob in sentence_with_importance:
-   #    if cnt < no_of_sentences:
-   #       sentence_no.append(word_prob[0])
-   #       cnt = cnt+1
-   #    else:
-   #       break
-   # sentence_no.sort()
-   # cnt = 1
-   # for sentence in tokenized_sentence:
-   #    if cnt in sentence_no:
-   #       summary.append(sentence)
-   #    cnt = cnt+1
-   # summary = " ".join(summary)
-   # print("\n")
-   # print("Summary FINAL:")
-   # print(summary)
+   summary = []
+   sentence_no = []
+   for word_prob in sentence_with_importance:
+      if cnt < no_of_sentences:
+         sentence_no.append(word_prob[0])
+         cnt = cnt+1
+      else:
+         break
+   sentence_no.sort()
+   cnt = 1
+   for sentence in tokenized_sentence:
+      if cnt in sentence_no:
+         summary.append(sentence)
+      cnt = cnt+1
+   summary = " ".join(summary)
+   print("\n")
+   print("Summary FINAL:")
+   print(summary)
    #read_legal_dict()
    legal_words = read_from_dict()
    orgs,persons,locs = loadorgspersonslocs(filetext)
@@ -209,7 +209,7 @@ def responseview(request):
    #df_vec = cal_df(cs_preprocess)
    #print (df_vec)
    #cs_summary = cal_tf_Idf(cs_preprocess, filetext)
-   summary = prepsummary(filetext)
+   #summary = prepsummary(filetext)
    chatsummary = prepchatsummary(filetext)
    #print (chatsummary)
    chatshortsummary = prepchatshortsummary(filetext)
@@ -219,16 +219,16 @@ def responseview(request):
    #print ("date:" , date_events)
    real = preprocess(filetext,impwords)
    #print (real)
-   sums = preprocess(summary,impwords)
-   print("Summary TEMP:")
-   print (sums)
+   # sums = preprocess(summary,impwords)
+   # print("Summary TEMP:")
+   # print (sums)
    chatkeys = parsekeywords(impwords)
    #print (chatkeys)
    #print (settings.BASE_DIR)
    context = {
       'filename' : name,
       'realtext' : real,
-      'summary' :  sums,
+      'summary' :  summary,
       'title' : 'Analysis of ' + name,
       'chatkeywords' : chatkeys,
       'chatsummary' : preprocess(chatsummary,impwords),
